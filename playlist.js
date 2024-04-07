@@ -45,7 +45,15 @@ frequentlyPlayed:[
     
     
 }
-    
-    
-    
+  songlist__btn.addEventListener("click",()=>{
+  songs.classList.toggle("active")
+    songs.style.display= "flex"
+      
+  })
   
+  
+  
+    
+    
+    
+}
