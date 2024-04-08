@@ -5,10 +5,13 @@ window.onload=()=>{
    let prev = document.querySelector(".prev")
   let share =  document.querySelector(".share")  
 let songlist__btn=  document.querySelector(".songlist__btn")  
+let songDiv = document.querySelector(".songDiv")
 let songs =  document.querySelector(".songs")  
 
 
 const playList = {
+
+
 favorite:[
 {
      artiste:"wizkid",
@@ -42,17 +45,37 @@ frequentlyPlayed:[
 ]
 
     
-    
-    
 }
+
+let obj = {
+    name:"Deji snow",
+    age:27,
+    gender:"Male",
+}
+
+
   songlist__btn.addEventListener("click",()=>{
   songs.classList.toggle("active")
     songs.style.display= "flex"
-      
+    songDiv.style.display = "block"
   })
   
+  let allSongFunc = ()=>{
   
+  let allFav = playList.favorite.map(x=>{
+   songs.innerHTML+=`<div class="songDiv">${x.artiste}_${x.song}</div>`
+  })
+  /*     
+  for([key,value] of Object.entries(obj)){
+         
+         console.log(`${value}`)
+       } 
+       */
+       
+
+  }
   
+  allSongFunc()
     
     
     
