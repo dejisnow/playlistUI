@@ -2,7 +2,9 @@ window.onload=()=>{
     
     let next = document.querySelector(".next");
    let shuffle = document.querySelector(".shuf");
+   let play = document.querySelector(".play")
    let prev = document.querySelector(".prev")
+   
   let share =  document.querySelector(".share")  
 let songlist__btn=  document.querySelector(".songlist__btn")  
 let songDiv = document.querySelector(".songDiv")
@@ -54,12 +56,28 @@ let obj = {
 }
 
 
-  songlist__btn.addEventListener("click",()=>{
+songlist__btn.addEventListener("click",()=>{
+  
   songs.classList.toggle("active")
+  
     songs.style.display= "flex"
-    songDiv.style.display = "block"
+
+  })
+ 
+ //Play
+  
+  play.addEventListener("click",()=>{
+  play.classList.toggle("active")
+  if(play.classList.contains("active")){
+      play.innerHTML = "Pause"
+  }else{
+      play.innerHTML = "Play"
+  }
+  
+      
   })
   
+  /*
   let allSongFunc = ()=>{
   
   let allFav = playList.favorite.map(x=>{
@@ -70,12 +88,12 @@ let obj = {
          
          console.log(`${value}`)
        } 
-       */
+    
        
 
   }
+     */
   
-  allSongFunc()
     
     
     
