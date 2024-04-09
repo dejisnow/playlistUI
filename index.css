@@ -7,6 +7,9 @@ body {
 
     
 }
+.songs{
+    display:none;
+}
 .songs.active{
     position:absolute ;
     left:5%;
@@ -35,7 +38,8 @@ body {
 }
 .songDiv{
     margin:5px;
-    display:none;
+    
+    
 }
 .playlist__div{
     width:100%;
@@ -69,6 +73,9 @@ height:100px;
     position:absolute ;
     bottom:20%;
     display:flex;
+}
+.play.active{
+    background-color:#2200f0;
 }
 .disc{
     width:150px;
