@@ -10,7 +10,7 @@ let songlist__btn=  document.querySelector(".songlist__btn")
 let songDiv = document.querySelector(".songDiv")
 let songs =  document.querySelector(".songs")  
 
-
+let isDisplayed = false;
 const playList = {
 
 
@@ -49,6 +49,8 @@ frequentlyPlayed:[
     
 }
 
+
+
 let obj = {
     name:"Deji snow",
     age:27,
@@ -57,13 +59,10 @@ let obj = {
 
 
 songlist__btn.addEventListener("click",()=>{
-  
-  songs.classList.toggle("active")
-  
-    songs.style.display= "flex"
+    songs.classList.add("active")
+     
+     })
 
-  })
- 
  //Play
   
   play.addEventListener("click",()=>{
@@ -77,12 +76,16 @@ songlist__btn.addEventListener("click",()=>{
       
   })
   
-  /*
+  
   let allSongFunc = ()=>{
   
   let allFav = playList.favorite.map(x=>{
-   songs.innerHTML+=`<div class="songDiv">${x.artiste}_${x.song}</div>`
+  songs.innerHTML+=`<div class="songDiv">${x.artiste}_${x.song}</div>`
+  
+   
   })
+  }
+  
   /*     
   for([key,value] of Object.entries(obj)){
          
