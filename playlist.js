@@ -4,7 +4,7 @@ window.onload=()=>{
    let shuffle = document.querySelector(".shuf");
    let play = document.querySelector(".play")
    let prev = document.querySelector(".prev")
-   
+   let disc = document.querySelector(".disc")
   let share =  document.querySelector(".share")  
 let songlist__btn=  document.querySelector(".songlist__btn")  
 let songDiv = document.querySelector(".songDiv")
@@ -51,13 +51,6 @@ frequentlyPlayed:[
 
 
 
-let obj = {
-    name:"Deji snow",
-    age:27,
-    gender:"Male",
-}
-
-
 songlist__btn.addEventListener("click",()=>{
     songs.classList.add("active")
      
@@ -66,6 +59,7 @@ songlist__btn.addEventListener("click",()=>{
  //Play
   
   play.addEventListener("click",()=>{
+ disc.classList.toggle("active")
   play.classList.toggle("active")
   if(play.classList.contains("active")){
       play.innerHTML = "Pause"
@@ -86,16 +80,6 @@ songlist__btn.addEventListener("click",()=>{
   })
   }
   
-  /*     
-  for([key,value] of Object.entries(obj)){
-         
-         console.log(`${value}`)
-       } 
-    
-       
-
-  }
-     */
   
     
     
