@@ -31,9 +31,10 @@ background:linear-gradient(#bbe2ff, #4faaeb);
     top:2%;
     left:4%;
     font-size:20px;
+    background-color:#bbe2ff;
     font-weight:700;
     border:0;
-    background-color:#2ceef2;
+
 }
 .songDiv{
     margin:5px;
@@ -87,11 +88,11 @@ height:100px;
     box-shadow:0px 0px 10px 10px #f2dff2;
 }
 .disc.active{
-    animation:playSong 500ms ease infinite ;
+    animation:playSong 700ms ease infinite ;
     
 }
 .controls{
-    background-color:#aff2aa;
+    background-color:#bbe2ff;
     width:fit-content;
     display:flex;
     justify-content:space-around;
@@ -110,11 +111,29 @@ height:100px;
     border-radius:5px;
 
 }
+.spinRoll{
+    position:relative;
+}
+.spinRoll::before{
+    position:absolute;
+    content:"";
+    width:10px;
+    border-radius:50%;
+    height:10px;
+    background-color:#bbfeef;
+}
 
 @keyframes playSong{
     
    0%{
        rotate :0deg;
+   }
+    5%{
+       rotate :10deg;
+   }
+   
+   10%{
+       rotate :20deg;
    } 
    25%{
        rotate :45deg;
@@ -125,6 +144,10 @@ height:100px;
    75%{
        rotate:180deg;
        }
+   850%{
+       rotate :250deg;
+   }
+   
    100%{
        rotate:360deg;
    }
